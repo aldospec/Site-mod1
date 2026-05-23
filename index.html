@@ -116,9 +116,8 @@
     .cabecalho-textos .subtitulo { font-size: 0.95rem; opacity: 0.92; font-weight: 400; letter-spacing: 0.02em; }
     .cabecalho-textos .estado { font-size: 0.85rem; opacity: 0.75; margin-top: 2px; font-style: italic; }
 
-    /* Navegação rápida para outros sistemas */
     .navegacao-sistemas {
-      background: var(--verde-medio); 
+      background: var(--verde-medio);
       padding: 14px 0;
       border-bottom: 1px solid rgba(255,255,255,0.1);
     }
@@ -178,20 +177,6 @@
     .intro .ornamento { width: 60px; height: 3px; background: var(--dourado); margin: 0 auto 24px; border-radius: 2px; }
     .intro p { font-size: 1.05rem; color: var(--cinza-texto); max-width: 720px; margin: 0 auto; line-height: 1.7; }
 
-    .info-atualizacao {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--verde-sutil); color: var(--verde-escuro);
-      padding: 8px 16px; border-radius: 100px;
-      font-size: 0.85rem; font-weight: 500; margin-top: 20px;
-      border: 1px solid var(--verde-claro);
-    }
-    .info-atualizacao::before {
-      content: ''; width: 8px; height: 8px;
-      background: var(--verde-medio); border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
     .destaques { padding: 32px 0; background: var(--cinza-fundo); border-top: 1px solid var(--cinza-borda); border-bottom: 1px solid var(--cinza-borda); }
     .destaques-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
     .destaque-card {
@@ -227,7 +212,6 @@
       color: var(--branco); padding: 20px 24px;
       display: flex; align-items: center; gap: 14px; position: relative;
     }
-    /* Cor diferente para card do SAPL */
     .secao.sapl .secao-header {
       background: linear-gradient(135deg, var(--azul-sapl) 0%, #495057 100%);
     }
@@ -336,7 +320,7 @@
         <button class="acess-btn" onclick="fonteOriginal()" aria-label="Fonte original" title="Fonte original (Ctrl 0)">A</button>
         <button class="acess-btn" onclick="alternarContraste()" aria-label="Alto contraste" title="Alto contraste">Contraste</button>
         <a href="http://www.vlibras.gov.br/" target="_blank" rel="noopener" class="acess-btn" aria-label="VLibras - Tradutor de Libras">Libras</a>
-        <a href="https://www.madeiro.pi.leg.br/sitemap" class="acess-btn">Mapa do Site</a>
+        <a href="https://www.madeiro.pi.leg.br/sitemap" target="_blank" rel="noopener" class="acess-btn">Mapa do Site</a>
       </div>
     </div>
   </div>
@@ -352,17 +336,16 @@
     </div>
   </header>
 
-  <!-- ====== NAVEGAÇÃO ENTRE SISTEMAS — destaca a separação clara ====== -->
   <nav class="navegacao-sistemas" aria-label="Sistemas da Câmara">
     <div class="container">
       <span class="nav-sistema-label">🏛 Outros sistemas da Câmara:</span>
-      <a href="https://www.madeiro.pi.leg.br/" class="nav-sistema-btn" target="_blank" rel="noopener">
+      <a href="https://www.madeiro.pi.leg.br/" target="_blank" rel="noopener" class="nav-sistema-btn" target="_blank" rel="noopener">
         Site Institucional <span class="seta">↗</span>
       </a>
       <a href="https://sapl.madeiro.pi.leg.br/" class="nav-sistema-btn" target="_blank" rel="noopener">
         SAPL — Processo Legislativo <span class="seta">↗</span>
       </a>
-      <a href="https://www.madeiro.pi.leg.br/ouvidoria" class="nav-sistema-btn">
+      <a href="https://www.madeiro.pi.leg.br/ouvidoria" target="_blank" rel="noopener" class="nav-sistema-btn">
         Ouvidoria / e-SIC <span class="seta">↗</span>
       </a>
     </div>
@@ -391,13 +374,10 @@
       </p>
       <p style="margin-top: 16px; font-size: 0.95rem;">
         Para <strong>informações institucionais</strong> (história, vereadores, notícias), acesse o
-        <a href="https://www.madeiro.pi.leg.br/" style="color: var(--verde-medio); font-weight: 600;">Site Institucional</a>.
+        <a href="https://www.madeiro.pi.leg.br/" target="_blank" rel="noopener" style="color: var(--verde-medio); font-weight: 600;">Site Institucional</a>.
         Para <strong>processo legislativo</strong> (projetos de lei, normas, sessões), acesse o
         <a href="https://sapl.madeiro.pi.leg.br/" style="color: var(--verde-medio); font-weight: 600;">SAPL</a>.
       </p>
-      <div class="info-atualizacao" role="status">
-        Dados atualizados em: <strong>&nbsp;19/05/2026</strong>
-      </div>
     </section>
 
     <section class="destaques" aria-labelledby="destaques-titulo">
@@ -417,7 +397,7 @@
             </div>
           </a>
 
-          <a href="https://www.madeiro.pi.leg.br/ouvidoria" class="destaque-card">
+          <a href="https://www.madeiro.pi.leg.br/ouvidoria" target="_blank" rel="noopener" class="destaque-card">
             <div class="destaque-icone">
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/>
@@ -463,7 +443,6 @@
     <section class="secoes container" aria-label="Categorias de informações">
       <div class="secoes-grid">
 
-        <!-- 1. RECEITAS -->
         <article class="secao" id="receitas">
           <header class="secao-header">
             <div class="secao-icone">
@@ -477,14 +456,13 @@
           <ul class="secao-lista">
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=LnkTransf" target="_blank" rel="noopener">Repasses Recebidos (Duodécimos) <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkReceitaExtraOrcamentaria" target="_blank" rel="noopener">Arrecadação Extra-Orçamentária <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/receitas">Declaração sobre Receitas Próprias</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/receitas">Declaração — Dívida Ativa</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/receitas">Declaração — Renúncia Fiscal</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/receitas" target="_blank" rel="noopener">Declaração sobre Receitas Próprias</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/receitas" target="_blank" rel="noopener">Declaração — Dívida Ativa</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/receitas" target="_blank" rel="noopener">Declaração — Renúncia Fiscal</a></li>
           </ul>
           <div class="secao-aviso">A Câmara não arrecada tributos — recebe duodécimos do Executivo (art. 168 CF)</div>
         </article>
 
-        <!-- 2. DESPESAS -->
         <article class="secao" id="despesas">
           <header class="secao-header">
             <div class="secao-icone">
@@ -517,12 +495,11 @@
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkDespesasPor_ExtraOrcamentaria" target="_blank" rel="noopener">Despesas Extra-Orçamentárias <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkDespesasPor_TipoOrcamento" target="_blank" rel="noopener">Despesas por Tipo de Orçamento <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkDespesasPor_ComprasRealizadas" target="_blank" rel="noopener">Compras Realizadas <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/despesas">Declaração — Adiantamento de Despesas</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/despesas">Declaração — Patrocínio e Publicidade</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/despesas" target="_blank" rel="noopener">Declaração — Adiantamento de Despesas</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/despesas" target="_blank" rel="noopener">Declaração — Patrocínio e Publicidade</a></li>
           </ul>
         </article>
 
-        <!-- 3. GESTÃO DE PESSOAS -->
         <article class="secao" id="pessoas">
           <header class="secao-header">
             <div class="secao-icone">
@@ -536,13 +513,12 @@
           </header>
           <ul class="secao-lista">
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=LnkServidores" target="_blank" rel="noopener">Servidores e Remuneração <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/gestao-de-pessoas/servidores-cedidos">Servidores Cedidos</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/gestao-de-pessoas/estagiarios">Estagiários</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/gestao-de-pessoas/terceirizados">Terceirizados</a></li>
+            <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=LnkServidoresCedidos" target="_blank" rel="noopener">Servidores Cedidos <span class="indicador-externo">↗</span></a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/recursos-humanos" target="_blank" rel="noopener">Declaração — Estagiários</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/recursos-humanos" target="_blank" rel="noopener">Declaração — Terceirizados</a></li>
           </ul>
         </article>
 
-        <!-- 4. LICITAÇÕES E CONTRATOS -->
         <article class="secao" id="licitacoes">
           <header class="secao-header">
             <div class="secao-icone">
@@ -555,13 +531,12 @@
           <ul class="secao-lista">
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkLicitacoes" target="_blank" rel="noopener">Licitações <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkContratos" target="_blank" rel="noopener">Contratos <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/avisos-e-editais-de-licitacao">Avisos e Editais</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/licitacoes-e-contratos-1">Plano Anual de Contratações (PCA)</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/licitacoes-e-contratos-1">Dispensa e Inexigibilidade</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/avisos-e-editais-de-licitacao" target="_blank" rel="noopener">Avisos e Editais</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/licitacoes-e-contratos-1" target="_blank" rel="noopener">Plano Anual de Contratações (PCA)</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/licitacoes-e-contratos-1" target="_blank" rel="noopener">Dispensa e Inexigibilidade</a></li>
           </ul>
         </article>
 
-        <!-- 5. PRESTAÇÃO DE CONTAS -->
         <article class="secao" id="contas">
           <header class="secao-header">
             <div class="secao-icone">
@@ -581,16 +556,15 @@
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=LnkRGF" target="_blank" rel="noopener">RGF — Gestão Fiscal <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=LnkParecerTribunal" target="_blank" rel="noopener">Parecer Prévio do TCE-PI <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=LnkExecContratoPublicidade" target="_blank" rel="noopener">Execução Contrato Publicidade <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/orcamento">PPA — Plano Plurianual</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/orcamento">LDO — Lei de Diretrizes Orçamentárias</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/orcamento">LOA — Lei Orçamentária Anual</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos">Plano Estratégico Institucional</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos">Relatório Anual de Gestão</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos">Relatórios do Controle Interno</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/orcamento" target="_blank" rel="noopener">PPA — Plano Plurianual</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/orcamento" target="_blank" rel="noopener">LDO — Lei de Diretrizes Orçamentárias</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/orcamento" target="_blank" rel="noopener">LOA — Lei Orçamentária Anual</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos" target="_blank" rel="noopener">Plano Estratégico Institucional</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos" target="_blank" rel="noopener">Relatório Anual de Gestão</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos" target="_blank" rel="noopener">Relatórios do Controle Interno</a></li>
           </ul>
         </article>
 
-        <!-- 6. SIC E OUVIDORIA -->
         <article class="secao" id="sic">
           <header class="secao-header">
             <div class="secao-icone">
@@ -602,22 +576,21 @@
             <h3 class="secao-titulo">SIC e Ouvidoria</h3>
           </header>
           <ul class="secao-lista">
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria">Ouvidoria — Manifestações</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria/++add++Claim?form.widgets.kind=pedido-de-acesso-a-informaassapso&form.widgets.area=ouvidoria">Pedido de Acesso à Informação (LAI)</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria/++add++Claim?form.widgets.kind=denaoncia&form.widgets.area=ouvidoria">Registrar Denúncia</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria/++add++Claim?form.widgets.kind=sugestapso&form.widgets.area=ouvidoria">Sugestões e Elogios</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria" target="_blank" rel="noopener">Ouvidoria — Manifestações</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria" target="_blank" rel="noopener">Pedido de Acesso à Informação (LAI)</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria" target="_blank" rel="noopener">Registrar Denúncia</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/ouvidoria" target="_blank" rel="noopener">Sugestões e Elogios</a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkPerguntasFrequentes" target="_blank" rel="noopener">Perguntas Frequentes <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkGlossario" target="_blank" rel="noopener">Glossário <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao">Carta de Serviços ao Cidadão</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao">LAI Local — Regulamentação</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao">Política de Privacidade (LGPD)</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao">Encarregado de Dados (DPO)</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao">Relatório Estatístico do e-SIC</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao">Classificação de Documentos Sigilosos</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao" target="_blank" rel="noopener">Carta de Serviços ao Cidadão</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao" target="_blank" rel="noopener">LAI Local — Regulamentação</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao" target="_blank" rel="noopener">Política de Privacidade (LGPD)</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao" target="_blank" rel="noopener">Encarregado de Dados (DPO)</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao" target="_blank" rel="noopener">Relatório Estatístico do e-SIC</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/acesso-a-informacao" target="_blank" rel="noopener">Classificação de Documentos Sigilosos</a></li>
           </ul>
         </article>
 
-        <!-- 7. ATIVIDADE LEGISLATIVA (SAPL) -->
         <article class="secao sapl" id="legislativo">
           <header class="secao-header">
             <div class="secao-icone">
@@ -642,13 +615,12 @@
             <li><a class="secao-link" href="https://sapl.madeiro.pi.leg.br/docadm/pesq-doc-adm" target="_blank" rel="noopener">Documentos Administrativos <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sapl.madeiro.pi.leg.br/sistema/relatorios/" target="_blank" rel="noopener">Relatórios de Produção <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/institucional/videos" target="_blank" rel="noopener">Transmissão de Sessões (TV/Vídeos) <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/parlamentares-e-gabinetes">Cotas Parlamentares / Verba Indenizatória</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/controle-e-fiscalizacao-do-executivo">Controle e Fiscalização do Executivo</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/parlamentares-e-gabinetes">Declaração — Emendas Parlamentares</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/parlamentares-e-gabinetes" target="_blank" rel="noopener">Cotas Parlamentares / Verba Indenizatória</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/controle-e-fiscalizacao-do-executivo" target="_blank" rel="noopener">Controle e Fiscalização do Executivo</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/parlamentares-e-gabinetes" target="_blank" rel="noopener">Declaração — Emendas Parlamentares</a></li>
           </ul>
         </article>
 
-        <!-- 8. PATRIMÔNIO E DEMAIS -->
         <article class="secao" id="patrimonio">
           <header class="secao-header">
             <div class="secao-icone">
@@ -660,13 +632,13 @@
             <h3 class="secao-titulo">Patrimônio e Atos Administrativos</h3>
           </header>
           <ul class="secao-lista">
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/bens-imoveis-e-veiculos">Bens Imóveis e Veículos</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos">Atos Administrativos</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/bens-imoveis-e-veiculos" target="_blank" rel="noopener">Bens Imóveis e Veículos</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos" target="_blank" rel="noopener">Atos Administrativos</a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkDividaAtivaRelatorio" target="_blank" rel="noopener">Dívida Ativa (Relatório) <span class="indicador-externo">↗</span></a></li>
             <li><a class="secao-link" href="https://sistemas.madeiro.pi.gov.br/cmmadeiro/Default.aspx?AcessoIndividual=lnkOutrosDocumentos" target="_blank" rel="noopener">Outros Documentos <span class="indicador-externo">↗</span></a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/convenios-e-transferencias">Declaração — Convênios e Acordos</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/bens-imoveis-e-veiculos">Declaração — Multas de Trânsito</a></li>
-            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos">Declaração — Obras Públicas</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/parlamentares-e-gabinetes" target="_blank" rel="noopener">Declaração — Convênios e Acordos</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/bens-imoveis-e-veiculos" target="_blank" rel="noopener">Declaração — Multas de Trânsito</a></li>
+            <li><a class="secao-link" href="https://www.madeiro.pi.leg.br/transparencia/atos-administrativos" target="_blank" rel="noopener">Declaração — Obras Públicas</a></li>
           </ul>
         </article>
 
@@ -742,6 +714,12 @@
               <polyline points="22,6 12,13 2,6"/>
             </svg>
             <span>camaramadeiro@gmail.com</span>
+          </div>
+          <div class="contato-item">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>(86) 98114-5562</span>
           </div>
         </div>
 
